@@ -37,7 +37,7 @@ class App extends Component {
 
     if (this.state.userName && this.state.userMessage) {
 
-      axios.post('/api/messages', {
+      axios.post('https://fnt-api.herokuapp.com/api/messages', {
         author: this.state.userName,
         content: this.state.userMessage
       })
@@ -120,7 +120,7 @@ class App extends Component {
 
   componentDidMount() {
     // Grab out messages from the API
-    axios.get('/api/messages').then((response) => {
+    axios.get('https://fnt-api.herokuapp.com/api/messages').then((response) => {
       // Everything worked, response.data is our array of messages
       this.setState({
         messages: response.data
