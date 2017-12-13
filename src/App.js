@@ -3,7 +3,6 @@ import './App.css';
 import {Message, Container, Hero, Title, SubTitle, Input, Button} from 'reactbulma';
 import axios from 'axios';
 
-
 class App extends Component {
 
   // Setting State
