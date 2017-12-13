@@ -45,7 +45,7 @@ class App extends Component {
           console.log(response.data);
           currentMessages.unshift(response.data);
           this.setState({
-            messages: response.data,
+            messages: currentMessages,
             userName: '',
             userMessage: ''
           });
@@ -123,7 +123,7 @@ class App extends Component {
     axios.get('https://fnt-api.herokuapp.com/api/messages').then((response) => {
       // Everything worked, response.data is our array of messages
       this.setState({
-        messages: response.data
+        messages: response.data.reverse()
       })
     })
 
